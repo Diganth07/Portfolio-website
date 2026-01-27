@@ -1,0 +1,139 @@
+.navbar{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    color: rgb(230, 230, 230);
+    background-color: dark;
+    height: 70px;
+    
+}
+
+.navbar_avatar{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    
+}
+
+.navbar_links{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.name{
+    color: #F5F5F5;
+}
+.hifin{
+    color: 	#C0C0C0;
+}
+
+.navbar_link{
+    color: #D3D3D3;
+    text-decoration: none;
+    font-size: 25px;
+   
+    transition: color 0.3s ease;
+}
+
+.navbar_link:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+/* Image left, text right, image stays fixed at top */
+.hero{
+    display: flex;
+    align-items: flex-start; /* keep image from dropping when text grows */
+    gap: 40px;
+    padding: 20px;
+    color: 		#A0A0A0;
+}
+
+@media (max-width: 800px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+#main-logo{
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto; /* prevent stretching/shrinking */
+}
+
+#main-logo img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+
+}
+h2.intro{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.tech-link{
+     display: flex;  /* Changed to flex */
+    
+}
+.tech-link img {
+  height: 45px; /* Reduced slightly */
+    width: 45px;
+    display: block;
+    object-fit: cover;
+    
+}
+
+.big {
+    word-spacing: 5px;
+}
+
+.projects h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+   
+}
+
+.project-list{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    align-items: center;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 207, 207);
+}
+.contact-icon{
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+}
+    
