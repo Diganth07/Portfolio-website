@@ -25,6 +25,148 @@
             background: #0b0d10;
             color: #eaeef2;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background: #f5f7fa;
+            color: #1a1e24;
+        }
+
+        body.light-mode .glass {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-mode .navbar {
+            background: rgba(245, 247, 250, 0.85);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        body.light-mode .navbar_link {
+            color: #4a4f5a;
+        }
+        body.light-mode .navbar_link:hover {
+            color: #1a1e24;
+        }
+
+        body.light-mode .skill-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .skill-card:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(108, 99, 255, 0.3);
+        }
+        body.light-mode .skill-item {
+            background: rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            color: #2a2e34;
+        }
+        body.light-mode .skill-item:hover {
+            background: rgba(108, 99, 255, 0.1);
+            border-color: #6c63ff;
+            color: #1a1e24;
+        }
+
+        body.light-mode .project-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .project-card:hover {
+            border-color: rgba(108, 99, 255, 0.3);
+        }
+        body.light-mode .project-body p {
+            color: #4a4f5a;
+        }
+        body.light-mode .project-tags span {
+            background: rgba(108, 99, 255, 0.08);
+            color: #4a4f8a;
+        }
+        body.light-mode .project-btn {
+            background: rgba(108, 99, 255, 0.1);
+            color: #3a3f8a;
+        }
+        body.light-mode .project-btn:hover {
+            background: #6c63ff;
+            color: #fff;
+        }
+        body.light-mode .project-btn.outline {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode .project-btn.outline:hover {
+            border-color: #6c63ff;
+            background: rgba(108, 99, 255, 0.1);
+        }
+
+        body.light-mode .intro {
+            color: #3a3f4a;
+        }
+        body.light-mode .intro .highlight {
+            color: #6c63ff;
+        }
+        body.light-mode .tech-badge span {
+            background: rgba(108, 99, 255, 0.08);
+            border: 1px solid rgba(108, 99, 255, 0.12);
+            color: #4a4f8a;
+        }
+        body.light-mode .tech-badge span:hover {
+            background: rgba(108, 99, 255, 0.15);
+        }
+
+        body.light-mode .contact-icons a {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .contact-icons a:hover {
+            background: rgba(108, 99, 255, 0.1);
+            border-color: #6c63ff;
+        }
+        body.light-mode .contact-icons img {
+            filter: invert(0.3) brightness(0.5);
+        }
+        body.light-mode .contact-icons a:hover img {
+            filter: invert(0) brightness(0.2);
+        }
+
+        body.light-mode .contact-text {
+            color: #5a5f6a;
+        }
+        body.light-mode .contact-text a {
+            color: #6c63ff;
+        }
+
+        body.light-mode .footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            color: #8a8f9a;
+        }
+
+        body.light-mode .nav_socials img {
+            filter: invert(0.3) brightness(0.5);
+        }
+        body.light-mode .nav_socials a:hover img {
+            filter: invert(0) brightness(0.2);
+        }
+
+        body.light-mode .about .name {
+            background: linear-gradient(135deg, #1a1e34, #4a4f8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body.light-mode .about .role {
+            background: linear-gradient(135deg, #6c63ff, #4a3faa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.light-mode .section-heading span {
+            background: #6c63ff;
+        }
+
+        body.light-mode .project-img {
+            background: linear-gradient(145deg, #e8ecf2, #d8dce2);
+            color: #6c63ff;
         }
 
         a {
@@ -49,6 +191,9 @@
         }
         ::-webkit-scrollbar-track {
             background: #14181c;
+        }
+        body.light-mode ::-webkit-scrollbar-track {
+            background: #e8ecf2;
         }
         ::-webkit-scrollbar-thumb {
             background: #6c63ff;
@@ -84,6 +229,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .navbar_avatar {
@@ -127,6 +273,36 @@
         }
         .navbar_link:hover::after {
             width: 100%;
+        }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            background: rgba(108, 99, 255, 0.15);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            color: #c8d0ff;
+            font-size: 1.2rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+        }
+        #theme-toggle:hover {
+            background: rgba(108, 99, 255, 0.25);
+            border-color: #6c63ff;
+            transform: scale(1.05);
+        }
+        body.light-mode #theme-toggle {
+            background: rgba(108, 99, 255, 0.1);
+            border-color: rgba(108, 99, 255, 0.2);
+            color: #3a3f6a;
+        }
+        body.light-mode #theme-toggle:hover {
+            background: rgba(108, 99, 255, 0.2);
         }
 
         /* social icons in nav */
@@ -209,6 +385,7 @@
             font-weight: 400;
             color: #c8d0dc;
             max-width: 620px;
+            transition: color 0.3s ease;
         }
         .intro .highlight {
             color: #a29bfe;
@@ -287,6 +464,10 @@
             color: #b8c0ff;
             margin-bottom: 1rem;
             letter-spacing: 0.3px;
+            transition: color 0.3s ease;
+        }
+        body.light-mode .skill-card h3 {
+            color: #3a3f6a;
         }
         .skill-items {
             display: flex;
@@ -316,6 +497,9 @@
             border-color: #6c63ff;
             color: #fff;
         }
+        body.light-mode .skill-item:hover {
+            color: #1a1e24;
+        }
 
         /* ---------- PROJECTS ---------- */
         .projects-section {
@@ -344,6 +528,9 @@
             border-color: rgba(108, 99, 255, 0.25);
             box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
         }
+        body.light-mode .project-card:hover {
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+        }
         .project-img {
             height: 170px;
             background: linear-gradient(145deg, #181e26, #0f1318);
@@ -353,6 +540,7 @@
             font-size: 2.8rem;
             color: #6c63ff;
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.3s ease;
         }
         .project-body {
             padding: 1.4rem 1.6rem 1.8rem;
@@ -371,6 +559,7 @@
             font-size: 0.92rem;
             margin: 0.4rem 0 1rem;
             flex: 1;
+            transition: color 0.3s ease;
         }
         .project-tags {
             display: flex;
@@ -386,6 +575,7 @@
             font-weight: 500;
             color: #b0b8ff;
             border: 1px solid rgba(108, 99, 255, 0.08);
+            transition: 0.2s;
         }
         .project-links {
             display: flex;
@@ -415,6 +605,12 @@
         .project-btn.outline:hover {
             background: rgba(255, 255, 255, 0.06);
             border-color: #6c63ff;
+        }
+        body.light-mode .project-btn.outline {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode .project-btn.outline:hover {
+            background: rgba(108, 99, 255, 0.1);
         }
 
         /* ---------- CONTACT ---------- */
@@ -462,6 +658,7 @@
             color: #909bb0;
             font-size: 0.95rem;
             margin-top: 0.5rem;
+            transition: color 0.3s ease;
         }
         .contact-text a {
             color: #a29bfe;
@@ -471,6 +668,9 @@
         .contact-text a:hover {
             color: #fff;
         }
+        body.light-mode .contact-text a:hover {
+            color: #1a1e24;
+        }
 
         /* ---------- FOOTER ---------- */
         .footer {
@@ -479,6 +679,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.04);
             color: #5f6a7a;
             font-size: 0.85rem;
+            transition: border-color 0.3s ease, color 0.3s ease;
         }
 
         /* ---------- RESPONSIVE ---------- */
@@ -514,6 +715,10 @@
                 width: 140px;
                 height: 140px;
             }
+            #theme-toggle {
+                font-size: 1rem;
+                padding: 0.3rem 0.6rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -532,6 +737,11 @@
             .skills-grid {
                 grid-template-columns: 1fr 1fr;
             }
+            .navbar_links {
+                gap: 0.6rem;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
         }
     </style>
 </head>
@@ -547,6 +757,7 @@
             <a href="#skills" class="navbar_link">Skills</a>
             <a href="#projects" class="navbar_link">Projects</a>
             <a href="#contact" class="navbar_link">Contact</a>
+            <button id="theme-toggle">🌙</button>
             <div class="nav_socials">
                 <a href="https://github.com/Diganth07" target="_blank" aria-label="GitHub">
                     <img src="github2.png" alt="GitHub" />
@@ -730,6 +941,36 @@
     <footer class="footer">
         <p>&copy; 2026 Diganth. All rights reserved.</p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.remove('dark-mode', 'light-mode');
+            body.classList.add(currentTheme);
+            themeToggle.textContent = currentTheme === 'dark-mode' ? '🌙' : '☀️';
+        } else {
+            // Default to dark mode
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.replace('dark-mode', 'light-mode');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                body.classList.replace('light-mode', 'dark-mode');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+    </script>
 
 </body>
 </html>
