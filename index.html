@@ -1,272 +1,735 @@
-<<<<<<< HEAD <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diganth | Fullstack Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        /* ---------- RESET / BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Diganth</title>
-        <link rel="stylesheet" href="style.css">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
-            rel="stylesheet">
-    </head>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <body class="dark-mode" style="font-family: 'Space Grotesk', sans-serif;">
-        <nav class="navbar">
-            <div class="navbar_links">
-                <a href="#about" class="navbar_link">About</a>
-                <a href="#skills" class="navbar_link">Skills</a>
-                <a href="#projects" class="navbar_link">Projects</a>
-                <a href="#contact" class="navbar_link">Contact</a>
-                <button id="theme-toggle">🌙</button>
-            </div>
-        </nav>
-        <section class="hero" id="about">
-            <div id="main-logo">
-                <img src="p.jpg" alt="logo">
-            </div>
-            <div class="about">
-                <h1>
-                    <span class="name">Hi, I'm Diganth</span>
-                    <span class="hifin">—</span>
-                    <span class="role"> A Fullstack Developer</span>
-                </h1>
-                <h2 class="intro-new">
-                    Building <span class="highlight">fullstack applications</span> with a focus on integrating <span
-                        class="highlight">AI</span> to create smarter, more dynamic user experiences.
-                    <span class="intro-secondary">Always learning, always iterating — I believe the best code is written
-                        with curiosity and purpose.</span>
-                </h2>
-            </div>
-        </section>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b0d10;
+            color: #eaeef2;
+            line-height: 1.6;
+        }
 
-        <section class="tech-stacks" id="skills">
-            <h1>SKILLS</h1>
-            <div class="stack-container">
-                <div class="stack-category">
-                    <h3>Frontend</h3>
-                    <div class="stack-items">
-                        <div class="stack-item"><img src="html.png" alt="HTML"><span>HTML</span></div>
-                        <div class="stack-item"><img src="css.png" alt="CSS"><span>CSS</span></div>
-                        <div class="stack-item"><img src="js.png" alt="JS"><span>JavaScript</span></div>
-                        <div class="stack-item"><img src="typescript.png" alt="ts"><span>TypeScript</span></div>
-                        <div class="stack-item"><img src="react.png" alt="React"><span>React</span></div>
-                        <div class="stack-item"><img src="tailwind.png" alt="Tailwind"><span>Tailwind CSS</span></div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Backend</h3>
-                    <div class="stack-items">
-                        <div class="stack-item"><img src="python.png" alt="Python"><span>Python</span></div>
-                        <div class="stack-item"><img src="java.png" alt="Java"><span>Java</span></div>
-                        <div class="stack-item"><img src="nodejs.png" alt="Node.js"><span>Node.js</span></div>
-                        <div class="stack-item"><img src="Express.png" alt="Express"><span>Express.js</span></div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Databases</h3>
-                    <div class="stack-items">
-                        <div class="stack-item"><img src="sql.png"><span>Sql</span></div>
-                        <div class="stack-item"><img src="MongoDB.png" alt="MongoDB"><span>MongoDB</span></div>
-                        <div class="stack-item"><img src="PostgresSQL.png" alt="PostgreSQL"><span>PostgreSQL</span>
-                        </div>
-                        <div class="stack-item"><img src="firebase.png" alt="Firebase"><span>Firebase</span></div>
-                        <div class="stack-item"><img src="supabase.png" alt="Supabase"><span>Supabase</span></div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Tools & Deployment</h3>
-                    <div class="stack-items">
-                        <div class="stack-item"><img src="git.png" alt="Git"><span>Git</span></div>
-                        <div class="stack-item"><img src="github.png" alt="GitHub"><span>GitHub</span></div>
-                        <div class="stack-item"><img src="Vercel.png" alt="Vercel"><span>Vercel</span></div>
-                        <div class="stack-item"><img src="Netlify.png" alt="Netlify"><span>Netlify</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        <div class="projects" id="projects">
-            <h1>PROJECTS</h1>
-            <div class="project-list">
-                <div class="project-item">
-                    <h2 class="project-title">URL Shortener</h2>
-                    <p class="project-description">A sleek tool built to transform long, cumbersome links into short,
-                        manageable URLs for easy sharing. Features custom aliases and click tracking to help users
-                        monitor
-                        their reach efficiently.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-btn">Visit</a>
-                        <a href="#" class="project-btn progress">Progress</a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <h2 class="project-title">Credit Card Anomaly Detection</h2>
-                    <p class="project-description">A machine learning project designed to identify fraudulent credit
-                        card
-                        transactions.
-                        Uses advanced anomaly detection algorithms to monitor patterns and alert users to suspicious
-                        activity in real-time.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-btn">Visit</a>
-                        <a href="#" class="project-btn progress">Progress</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-        <div class="contact" id="contact">
-            <h1>CONTACT ME</h1>
-            <div class="icon">
-                </a>
-                <a href="https://www.linkedin.com/in/diganth-k-058a1026b" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn Icon" class="contact-icon">
-                </a>
-                <a href="https://x.com/Diganth_k306" target="_blank">
-                    <img src="twitter.png" alt="Twitter Icon" class="contact-icon">
-                </a>
-                <a href="https://github.com/Diganth07" target="_blank">
-                    <img src="github2.png" alt="GitHub Icon" class="contact-icon">
-                </a>
-            </div>
-        </div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Diganth. All rights reserved.</p>
-            </div>
-        </footer>
+        /* ---------- SCROLLBAR ---------- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #14181c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6c63ff;
+            border-radius: 6px;
+        }
 
-        <script>
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
+        /* ---------- GLASS CARD ---------- */
+        .glass {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 2rem;
+            padding: 2rem 2.2rem;
+            transition: 0.25s ease;
+        }
 
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme) {
-                body.classList.remove('dark-mode', 'light-mode');
-                body.classList.add(currentTheme);
-                themeToggle.textContent = currentTheme === 'dark-mode' ? '🌙' : '☀️';
+        .glass:hover {
+            border-color: rgba(108, 99, 255, 0.25);
+            box-shadow: 0 12px 40px rgba(108, 99, 255, 0.08);
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 2.5rem;
+            background: rgba(11, 13, 16, 0.72);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar_avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #6c63ff;
+            transition: 0.3s;
+        }
+        .navbar_avatar:hover {
+            transform: scale(1.06);
+            border-color: #a29bfe;
+        }
+
+        .navbar_links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .navbar_link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #b0b8c5;
+            transition: 0.2s;
+            position: relative;
+        }
+        .navbar_link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: #6c63ff;
+            transition: 0.3s;
+        }
+        .navbar_link:hover {
+            color: #fff;
+        }
+        .navbar_link:hover::after {
+            width: 100%;
+        }
+
+        /* social icons in nav */
+        .nav_socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+        .nav_socials a {
+            opacity: 0.5;
+            transition: 0.25s;
+            display: inline-flex;
+        }
+        .nav_socials a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+        .nav_socials img {
+            width: 22px;
+            height: 22px;
+            filter: invert(1) brightness(0.8);
+            transition: 0.2s;
+        }
+        .nav_socials a:hover img {
+            filter: invert(1) brightness(1);
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding: 4rem 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #main-logo {
+            flex-shrink: 0;
+        }
+        #main-logo img {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #6c63ff;
+            box-shadow: 0 0 60px rgba(108, 99, 255, 0.15);
+            transition: 0.4s;
+        }
+        #main-logo img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 80px rgba(108, 99, 255, 0.25);
+        }
+
+        .about h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .about .name {
+            background: linear-gradient(135deg, #f0f4ff, #b0b8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .about .hifin {
+            color: #6c63ff;
+            margin: 0 0.25rem;
+        }
+        .about .role {
+            background: linear-gradient(135deg, #a29bfe, #6c63ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .intro {
+            margin-top: 1.2rem;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #c8d0dc;
+            max-width: 620px;
+        }
+        .intro .highlight {
+            color: #a29bfe;
+            font-weight: 500;
+        }
+
+        .tech-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+        .tech-badge span {
+            background: rgba(108, 99, 255, 0.10);
+            border: 1px solid rgba(108, 99, 255, 0.15);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #c8d0fc;
+            letter-spacing: 0.3px;
+            transition: 0.2s;
+        }
+        .tech-badge span:hover {
+            background: rgba(108, 99, 255, 0.20);
+            border-color: #6c63ff;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- SECTION HEADINGS ---------- */
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .section-heading span {
+            background: #6c63ff;
+            width: 8px;
+            height: 32px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* ---------- SKILLS ---------- */
+        .skills-section {
+            padding: 3rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 1.6rem 1.4rem;
+            transition: 0.25s ease;
+        }
+        .skill-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(108, 99, 255, 0.25);
+            transform: translateY(-6px);
+        }
+        .skill-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #b8c0ff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+        }
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.25rem 0.8rem 0.25rem 0.5rem;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #cdd5e0;
+            transition: 0.2s;
+        }
+        .skill-item img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        .skill-item:hover {
+            background: rgba(108, 99, 255, 0.10);
+            border-color: #6c63ff;
+            color: #fff;
+        }
+
+        /* ---------- PROJECTS ---------- */
+        .projects-section {
+            padding: 2rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.8rem;
+            overflow: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(108, 99, 255, 0.25);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+        }
+        .project-img {
+            height: 170px;
+            background: linear-gradient(145deg, #181e26, #0f1318);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            color: #6c63ff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .project-body {
+            padding: 1.4rem 1.6rem 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-body h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.3px;
+        }
+        .project-body p {
+            color: #b0bcca;
+            font-size: 0.92rem;
+            margin: 0.4rem 0 1rem;
+            flex: 1;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+        .project-tags span {
+            background: rgba(108, 99, 255, 0.08);
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #b0b8ff;
+            border: 1px solid rgba(108, 99, 255, 0.08);
+        }
+        .project-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: auto;
+        }
+        .project-btn {
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: rgba(108, 99, 255, 0.12);
+            border: 1px solid rgba(108, 99, 255, 0.12);
+            color: #c8d0ff;
+            transition: 0.2s;
+        }
+        .project-btn:hover {
+            background: #6c63ff;
+            color: #fff;
+            border-color: #6c63ff;
+            transform: translateY(-2px);
+        }
+        .project-btn.outline {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+        .project-btn.outline:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: #6c63ff;
+        }
+
+        /* ---------- CONTACT ---------- */
+        .contact-section {
+            padding: 2rem 2rem 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin: 2rem 0 1.5rem;
+            flex-wrap: wrap;
+        }
+        .contact-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: 0.25s ease;
+        }
+        .contact-icons a:hover {
+            background: rgba(108, 99, 255, 0.12);
+            border-color: #6c63ff;
+            transform: translateY(-6px);
+            box-shadow: 0 8px 28px rgba(108, 99, 255, 0.12);
+        }
+        .contact-icons img {
+            width: 28px;
+            height: 28px;
+            filter: invert(1) brightness(0.7);
+            transition: 0.2s;
+        }
+        .contact-icons a:hover img {
+            filter: invert(1) brightness(1);
+        }
+
+        .contact-text {
+            color: #909bb0;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        .contact-text a {
+            color: #a29bfe;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .contact-text a:hover {
+            color: #fff;
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            text-align: center;
+            padding: 2.5rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            color: #5f6a7a;
+            font-size: 0.85rem;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 820px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 2rem 1.2rem 3rem;
             }
+            .about h1 {
+                font-size: 2.2rem;
+            }
+            .intro {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .tech-badge {
+                justify-content: center;
+            }
+            .navbar_links {
+                gap: 1rem;
+            }
+            .navbar {
+                padding: 0.8rem 1.2rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .nav_socials {
+                margin-left: 0.2rem;
+            }
+            #main-logo img {
+                width: 140px;
+                height: 140px;
+            }
+        }
 
-            themeToggle.addEventListener('click', () => {
-                if (body.classList.contains('dark-mode')) {
-                    body.classList.replace('dark-mode', 'light-mode');
-                    themeToggle.textContent = '☀️';
-                    localStorage.setItem('theme', 'light-mode');
-                } else {
-                    body.classList.replace('light-mode', 'dark-mode');
-                    themeToggle.textContent = '🌙';
-                    localStorage.setItem('theme', 'dark-mode');
-                }
-            });
-        </script>
-    </body>
+        @media (max-width: 480px) {
+            .navbar_links a:not(.navbar_link) {
+                display: none;
+            }
+            .navbar_link {
+                font-size: 0.8rem;
+            }
+            .section-heading {
+                font-size: 1.5rem;
+            }
+            .project-list {
+                grid-template-columns: 1fr;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
 
-    =======
-    <!DOCTYPE html>
-    <html lang="en" class="dark" style="color-scheme: dark;">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body style="background-color: dark; font-family: 'Oxanium', sans-serif;">
-        <nav class="navbar">
-            <a href="index.html">
-                <img src="p.jpg" class="navbar_avatar" alt="avatar">
-            </a>
-            <div class="navbar_links">
-                <a href="#about" class="navbar_link">About</a>
-                <a href="#projects" class="navbar_link">Projects</a>
-                <a href="#contact" class="navbar_link">Contact</a>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <a href="#">
+            <img src="p.jpg" class="navbar_avatar" alt="avatar" />
+        </a>
+        <div class="navbar_links">
+            <a href="#about" class="navbar_link">About</a>
+            <a href="#skills" class="navbar_link">Skills</a>
+            <a href="#projects" class="navbar_link">Projects</a>
+            <a href="#contact" class="navbar_link">Contact</a>
+            <div class="nav_socials">
+                <a href="https://github.com/Diganth07" target="_blank" aria-label="GitHub">
+                    <img src="github2.png" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/diganth-k-058a1026b" target="_blank" aria-label="LinkedIn">
+                    <img src="linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://x.com/Diganth_k306" target="_blank" aria-label="Twitter">
+                    <img src="twitter.png" alt="Twitter" />
+                </a>
             </div>
-        </nav>
-        <section class="hero">
-            <div id="main-logo">
-                <img src="p.jpg" alt="logo">
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="about">
+        <div id="main-logo">
+            <img src="p.jpg" alt="Diganth" />
+        </div>
+        <div class="about">
+            <h1>
+                <span class="name">Hi, I'm Diganth</span>
+                <span class="hifin">—</span>
+                <span class="role">Fullstack Developer</span>
+            </h1>
+            <p class="intro">
+                I build <span class="highlight">fullstack applications</span> with a focus on integrating
+                <span class="highlight">AI</span> to create smarter, more dynamic user experiences.
+                <br /><br />
+                Always learning, always iterating — I believe the best code is written with curiosity and purpose.
+            </p>
+            <div class="tech-badge">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>MongoDB</span>
+                <span>PostgreSQL</span>
             </div>
-            <div class="about" id="about">
-                <h1>
-                    <span class="name">Hi, I'm Diganth</span>
-                    <span class="hifin">—</span>
-                    <span class="role"> A Frontend Developer</span>
-                </h1>
-                <h2 class="intro">
-                    <span>I build interactive web apps using</span>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="tech-link">
-                        <img src="html.png" alt="HTML logo">
-                    </a>
+        </div>
+    </section>
 
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="tech-link">
-                        <img src="css.png" alt="CSS logo">
-                    </a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="tech-link">
-                        <img src="js.png" alt="JavaScript logo">
-                    </a>
-                    <a href="https://react.dev/" target="_blank" class="tech-link">
-                        <img src="react.png" alt="React logo">
-                    </a>
-                    <a href="https://tailwindcss.com/" target="_blank" class="tech-link">
-                        <img src="tailwind.png" alt="Tailwind CSS logo">
-                    </a>
-                    <span>and more.</span>
-                </h2>
-                <h3 class="big"> Enthusiastic about
-                    frontend technologies like ANGULAR,VUE and Databases like mongodb,sql.
-                </h3>
-
-
+    <!-- ========== SKILLS ========== -->
+    <section class="skills-section" id="skills">
+        <div class="section-heading">
+            <span></span> Skills
+        </div>
+        <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skill-card">
+                <h3>⚡ Frontend</h3>
+                <div class="skill-items">
+                    <span class="skill-item"><img src="html.png" alt="HTML" /> HTML</span>
+                    <span class="skill-item"><img src="css.png" alt="CSS" /> CSS</span>
+                    <span class="skill-item"><img src="js.png" alt="JS" /> JavaScript</span>
+                    <span class="skill-item"><img src="typescript.png" alt="TS" /> TypeScript</span>
+                    <span class="skill-item"><img src="react.png" alt="React" /> React</span>
+                    <span class="skill-item"><img src="tailwind.png" alt="Tailwind" /> Tailwind</span>
+                </div>
             </div>
+            <!-- Backend -->
+            <div class="skill-card">
+                <h3>⚙️ Backend</h3>
+                <div class="skill-items">
+                    <span class="skill-item"><img src="python.png" alt="Python" /> Python</span>
+                    <span class="skill-item"><img src="java.png" alt="Java" /> Java</span>
+                    <span class="skill-item"><img src="nodejs.png" alt="Node.js" /> Node.js</span>
+                    <span class="skill-item"><img src="Express.png" alt="Express" /> Express</span>
+                </div>
+            </div>
+            <!-- Databases -->
+            <div class="skill-card">
+                <h3>🗄️ Databases</h3>
+                <div class="skill-items">
+                    <span class="skill-item"><img src="sql.png" alt="SQL" /> SQL</span>
+                    <span class="skill-item"><img src="MongoDB.png" alt="MongoDB" /> MongoDB</span>
+                    <span class="skill-item"><img src="PostgresSQL.png" alt="PostgreSQL" /> PostgreSQL</span>
+                    <span class="skill-item"><img src="firebase.png" alt="Firebase" /> Firebase</span>
+                    <span class="skill-item"><img src="supabase.png" alt="Supabase" /> Supabase</span>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div class="skill-card">
+                <h3>🛠️ Tools & Deployment</h3>
+                <div class="skill-items">
+                    <span class="skill-item"><img src="git.png" alt="Git" /> Git</span>
+                    <span class="skill-item"><img src="github.png" alt="GitHub" /> GitHub</span>
+                    <span class="skill-item"><img src="Vercel.png" alt="Vercel" /> Vercel</span>
+                    <span class="skill-item"><img src="Netlify.png" alt="Netlify" /> Netlify</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
-        <div class="projects" id="projects">
-            <h1>PROJECTS</h1>
-            <div class="project-list">
-                <!-- Project 1 -->
-                <div class="project-item">
-                    <img src="project1.png" alt="Project 1 Screenshot" class="project-image">
-                    <h2 class="project-title">Weather App</h2>
-                    <p class="project-description">A web application that provides real-time weather updates using
-                        OpenWeatherMap API.</p>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-item">
-                    <img src="project2.png" alt="Project 2 Screenshot" class="project-image">
-                    <h2 class="project-title">Todo List</h2>
-                    <p class="project-description">A simple and intuitive todo list application to manage daily tasks
-                        effectively.</p>
-                </div>
-                <!-- Add more projects as needed -->
-                <div class="project-item">
-                    <img src="project3.png" alt="Project 3 Screenshot" class="project-image">
-                    <h2 class="project-title">Portfolio Website</h2>
-                    <p class="project-description">My personal portfolio website showcasing my skills, projects, and
-                        contact information.</p>
-                </div>
-
-                <div class="contact" id="contact">
-                    <h1>CONTACT ME</h1>
-                    <div class="icon">
-                        <a href="mailto:kdiganth306@gmail.com" target="_blank">
-                            <img src="gmail.png" alt="Email Icon" class="contact-icon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/diganth-k-058a1026b" target="_blank">
-                            <img src="linkedin.png" alt="LinkedIn Icon" class="contact-icon">
-                        </a>
-                        <a href="https://x.com/Diganth_k306" target="_blank">
-                            <img src="twitter.png" alt="Twitter Icon" class="contact-icon">
-                        </a>
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects-section" id="projects">
+        <div class="section-heading">
+            <span></span> Projects
+        </div>
+        <div class="project-list">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-img">🔗</div>
+                <div class="project-body">
+                    <h2>URL Shortener</h2>
+                    <p>A sleek tool to transform long links into short, manageable URLs. Features custom aliases and click tracking.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Node</span>
+                        <span>MongoDB</span>
                     </div>
-                    <footer class="footer">
-                        <div class="footer-content">
-                            <p>&copy; 2026 Diganth. All rights reserved.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-btn">Live Demo</a>
+                        <a href="#" class="project-btn outline">Source</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-img">🛡️</div>
+                <div class="project-body">
+                    <h2>Anomaly Detection</h2>
+                    <p>Credit card fraud detection using ML. Identifies suspicious patterns and alerts users in real-time.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn">Live Demo</a>
+                        <a href="#" class="project-btn outline">Source</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-img">🌦️</div>
+                <div class="project-body">
+                    <h2>Weather App</h2>
+                    <p>Real-time weather updates using OpenWeatherMap API. Clean UI with 5-day forecasts.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Tailwind</span>
+                        <span>API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-btn">Live Demo</a>
+                        <a href="#" class="project-btn outline">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ========== CONTACT ========== -->
+    <section class="contact-section" id="contact">
+        <div class="section-heading" style="justify-content: center;">
+            <span></span> Contact Me
+        </div>
+        <div class="contact-icons">
+            <a href="mailto:kdiganth306@gmail.com" target="_blank" aria-label="Email">
+                <img src="gmail.png" alt="Email" />
+            </a>
+            <a href="https://www.linkedin.com/in/diganth-k-058a1026b" target="_blank" aria-label="LinkedIn">
+                <img src="linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://x.com/Diganth_k306" target="_blank" aria-label="Twitter">
+                <img src="twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://github.com/Diganth07" target="_blank" aria-label="GitHub">
+                <img src="github2.png" alt="GitHub" />
+            </a>
+        </div>
+        <p class="contact-text">
+            Have a question or want to work together?<br />
+            Reach out at <a href="mailto:kdiganth306@gmail.com">kdiganth306@gmail.com</a>
+        </p>
+    </section>
 
-    </body>
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <p>&copy; 2026 Diganth. All rights reserved.</p>
+    </footer>
 
-    >>>>>>> 1a535d7a56404874cdbf163cab2fe490361893ea
-
-    </html>
+</body>
+</html>
